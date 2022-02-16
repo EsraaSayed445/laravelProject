@@ -6,25 +6,16 @@
 </head>
 
 <body>
-    <form action="/store" method="POST">
+    <form action="/posts" method="POST">
         @csrf
-        <div class="mb-3">
-            <label for="id" class="form-label">ID</label>
-            <input type="text" name="id" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" >
-        </div>
-        <div class="mb-3">
-            <label for="name" class="form-label">Body</label>
-            <input type="text" class="form-control" name="body" >
-        </div>
         <div class="mb-3">
             <label for="name" class="form-label">Title</label>
             <input type="text" class="form-control" name="title" >
         </div>
-     
+        <div class="mb-3">
+            <label for="name" class="form-label">Description</label>
+            <input type="text" class="form-control" name="description" >
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 

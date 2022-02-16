@@ -6,25 +6,17 @@
 </head>
 
 <body>
-    <form action="/update" method="POST">
+    <form action="/posts/{{$id}}" method="POST">
         @csrf
-        <div class="mb-3">
-            <label for="id" class="form-label">ID</label>
-            <input type="text" name="id" class="form-control" value={{$id}}>
-        </div>
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" value={{$name}}>
-        </div>
-        <div class="mb-3">
-            <label for="name" class="form-label">Body</label>
-            <input type="text" class="form-control" name="body"  value={{$body}}>
-        </div>
+        @method("PATCH")
         <div class="mb-3">
             <label for="name" class="form-label">Title</label>
-            <input type="text" class="form-control" name="title"  value={{$title}}>
+            <input type="text" class="form-control" name="title" value={{$title}}>
         </div>
-     
+        <div class="mb-3">
+            <label for="name" class="form-label">Description</label>
+            <input type="text" class="form-control" name="description" value={{$description}}>
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
